@@ -1,213 +1,579 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인문 철학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #fdfdfa;
-      --charcoal-fg: #1c1a17;
-      --gold-accent: #c29d6d;
-      --hairline-color: #e6e3db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합정 셔츠룸 비교 | 합정 셔츠룸 추천 & 가격 정보</title>
+    <meta name="description" content="합정 셔츠룸 비교, 진짜 가성비 끝판왕은 어디? 시스템, 가격, 분위기까지 싹 다 까발린다. 합정에서 셔츠룸 고민 끝내고 싶으면 여기 보세요.">
+    <meta name="keywords" content="합정 셔츠룸, 합정 셔츠룸 비교, 합정 셔츠룸 추천, 합정 셔츠룸 가격, 합정 셔츠룸 시스템, 합정 셔츠룸 후기">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+    <link rel="canonical" href="https://t3b08-hj-shirts-cmp.vercel.app/">
+    
+    <!-- OG 메타 -->
+    <meta property="og:title" content="합정 셔츠룸 비교 | 진짜 추천 vs 거르는 곳">
+    <meta property="og:description" content="합정 셔츠룸 비교, 시스템 가격 분위기 다 까발림. 010-6279-0862 문의">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-hj-shirts-cmp.vercel.app/">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="합정 셔츠룸 비교 | 진짜 추천 vs 거르는 곳">
+    <meta name="twitter:description" content="합정 셔츠룸 비교, 시스템 가격 분위기 다 까발림.">
+    
+    <!-- JSON-LD 스키마 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "합정 셔츠룸 비교",
+        "description": "합정 지역 셔츠룸 비교 정보 제공 사이트",
+        "telephone": "+82-10-6279-0862",
+        "url": "https://t3b08-hj-shirts-cmp.vercel.app/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "합정",
+            "addressRegion": "서울",
+            "addressCountry": "KR"
+        }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* CSS Reset & Base */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { 
+            font-family: system-ui, -apple-system, 'Inter', sans-serif;
+            background-color: #faf8f5;
+            color: #2d2a26;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Container */
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+        /* Typography */
+        h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; }
+        h1 { font-size: 2.5rem; margin-bottom: 16px; }
+        h2 { font-size: 1.75rem; margin-bottom: 24px; padding-bottom: 8px; border-bottom: 2px solid #2d2a26; display: inline-block; }
+        h3 { font-size: 1.25rem; margin-bottom: 8px; }
+        p { margin-bottom: 16px; }
+        a { color: #e07a5f; text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: #c05a3f; }
+
+        /* Header & Navigation */
+        header { 
+            background: #2d2a26; 
+            color: #faf8f5; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            border-bottom: 2px solid #e07a5f;
+        }
+        .nav-container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 16px 24px; 
+            max-width: 960px; 
+            margin: 0 auto;
+        }
+        .logo { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
+        .logo a { color: #faf8f5; }
+        .logo a:hover { color: #e07a5f; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: #faf8f5; font-size: 0.9rem; font-weight: 500; padding: 4px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease; }
+        .nav-links a:hover { border-bottom-color: #e07a5f; }
+        .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; background: none; border: none; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: #faf8f5; transition: all 0.3s ease; }
+        .nav-cta { 
+            background: #e07a5f; 
+            color: #faf8f5 !important; 
+            padding: 8px 16px; 
+            border-radius: 0; 
+            font-weight: 600; 
+            border: none;
+            transition: background 0.2s ease;
+        }
+        .nav-cta:hover { background: #c05a3f; border-bottom-color: transparent !important; }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 24px 64px;
+            background: #2d2a26;
+            color: #faf8f5;
+            position: relative;
+            border-bottom: 4px solid #e07a5f;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20px,
+                rgba(224, 122, 95, 0.05) 20px,
+                rgba(224, 122, 95, 0.05) 40px
+            );
+            pointer-events: none;
+        }
+        .hero-content { max-width: 960px; margin: 0 auto; position: relative; z-index: 1; }
+        .hero h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 16px; }
+        .hero h1 span { color: #e07a5f; }
+        .hero p { font-size: 1.1rem; max-width: 600px; margin-bottom: 32px; opacity: 0.9; }
+        .hero-cta { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            background: #e07a5f; 
+            color: #faf8f5; 
+            padding: 14px 32px; 
+            font-weight: 700; 
+            font-size: 1rem;
+            border: 2px solid #e07a5f;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+        .hero-cta:hover { background: transparent; color: #e07a5f; }
+
+        /* Section Divider */
+        section { padding: 40px 0; border-top: 1px solid #2d2a26; }
+        section:first-of-type { border-top: none; }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .card {
+            background: #faf8f5;
+            border: 2px solid #2d2a26;
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 0 #e07a5f;
+        }
+        .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+        .card p { font-size: 0.9rem; opacity: 0.8; margin-bottom: 0; }
+        .card .price-tag { 
+            display: inline-block; 
+            background: #e07a5f; 
+            color: #faf8f5; 
+            padding: 2px 8px; 
+            font-weight: 700; 
+            font-size: 0.85rem;
+            margin-top: 12px;
+        }
+
+        /* Review Cards */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .review-card {
+            border: 2px solid #2d2a26;
+            padding: 20px;
+            background: #faf8f5;
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #2d2a26;
+        }
+        .review-nickname { font-weight: 700; font-size: 0.9rem; }
+        .review-date { font-size: 0.8rem; opacity: 0.6; }
+        .stars { color: #e07a5f; letter-spacing: 2px; font-size: 1rem; }
+        .review-text { font-size: 0.9rem; line-height: 1.6; }
+
+        /* Feature List */
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            list-style: none;
+        }
+        .feature-list li {
+            padding: 16px 20px;
+            border: 2px solid #2d2a26;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .feature-list li::before {
+            content: '→';
+            color: #e07a5f;
+            font-weight: 700;
+        }
+
+        /* Contact / CTA */
+        .cta-block {
+            background: #2d2a26;
+            color: #faf8f5;
+            padding: 40px 24px;
+            text-align: center;
+            border-bottom: 4px solid #e07a5f;
+        }
+        .cta-block h2 { border-bottom-color: #e07a5f; margin-bottom: 16px; }
+        .cta-phone {
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e07a5f;
+            padding: 12px 24px;
+            border: 2px solid #e07a5f;
+            margin-top: 16px;
+            transition: background 0.2s ease;
+        }
+        .cta-phone:hover { background: #e07a5f; color: #faf8f5; }
+
+        /* Footer */
+        footer {
+            background: #2d2a26;
+            color: #faf8f5;
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 2px solid #e07a5f;
+        }
+        footer p { opacity: 0.7; margin-bottom: 4px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { 
+                display: none; 
+                position: absolute; 
+                top: 100%; 
+                left: 0; 
+                right: 0; 
+                background: #2d2a26; 
+                flex-direction: column; 
+                padding: 16px 24px; 
+                gap: 12px;
+                border-bottom: 2px solid #e07a5f;
+            }
+            .nav-links.active { display: flex; }
+            .hamburger { display: flex; }
+            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+            .hero h1 { font-size: 2rem; }
+            .hero { padding: 48px 24px 40px; }
+
+            .card-grid, .review-grid { grid-template-columns: 1fr; }
+            .feature-list { grid-template-columns: 1fr; }
+
+            h2 { font-size: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .nav-container { padding: 12px 16px; }
+            .hero h1 { font-size: 1.75rem; }
+            .cta-phone { font-size: 1.2rem; }
+        }
+    </style>
+<meta property="og:image" content="og-image.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="brand">EDITORIAL.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="kicker">BOUTIQUE KR / SELECTION ACCENT</div>
-      <h1>인문 철학 지식 저널 및 아카이브</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인문 철학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Editorial Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h3>
-          <p>네덜란드의 고독한 렌즈 가공 철학자 스피노자의 주저 에티카에서 피력된 코나투스(자신의 존재를 유지하려는 영속적 본성 노력) 개념을 동물에게 투영해 볼 때, 인간 중심적 관점에서 해...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h3>
-          <p>시작과 끝이 규정되지 않고 끊임없이 파편적으로 연결되며 영토를 가로지르는 들뢰즈의 리좀 모델을 격자형 대도시가 아닌 오랜 유기적 골목길의 공간 미학에 적용해 볼 때, 규칙적 구획이...</p>
-        </a>
-      
+<header>
+    <div class="nav-container">
+        <div class="logo"><a href="/">합정셔츠룸.비교</a></div>
+        <button class="hamburger" aria-label="메뉴 열기" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#compare">비교분석</a></li>
+            <li><a href="#reviews">생후기</a></li>
+            <li><a href="#features">시스템</a></li>
+            <li><a href="tel:010-6279-0862" class="nav-cta">📞 전화문의</a></li>
+        </ul>
+    </div>
+</header>
 
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h3>
-          <p>중세 대철학자 토마스 아퀴나스가 주창했던 천사들의 언어(Speech of Angels) 형이상학은 물리적 육체와 공간의 장벽이 없는 순수한 지성적 존재들이 어떻게 공간을 왜곡하고 ...</p>
-        </a>
-      
+<section class="hero">
 
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+<!-- SEO Visual 1: 합정 셔츠룸 비교 Editorial Apple Hero -->
+<div class="seo-visual-hero" role="img" aria-label="강서 셔츠룸 정보 — 합정 합정 셔츠룸 비교" 
+     style="width:100%;padding:64px 24px;background:#faf9f6;border-bottom:1px solid #e5e5e0;text-align:left;margin:32px 0">
+  <div style="max-width:800px;margin:0 auto">
+    <div style="font-family:serif;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.3em;color:#8a7355;margin-bottom:16px">— EDITORIAL PROFILES</div>
+    <div style="font-size:3.5em;line-height:1.1;font-weight:400;font-family:serif;color:#1c1c1e;letter-spacing:-0.03em;margin-bottom:16px">합정 셔츠룸 비교</div>
+    <p style="font-size:1.05rem;line-height:1.6;color:#1c1c1e;opacity:0.85;max-width:600px">합정를 중심으로 강서 셔츠룸 정보에 관한 독립적이고 깊이 있는 정보를 제공합니다.</p>
   </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"합정 셔츠룸 비교","description":"강서 셔츠룸 정보","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+    <div class="hero-content">
+        <h1>합정 셔츠룸,<br><span>그냥 가면 호구된다.</span></h1>
+        <p>시스템, 가격, 분위기, 서비스. 다 똑같을 거라고? 착각하지 마. 합정에서 진짜 가성비 터지는 셔츠룸, 우리가 까발려준다. 비교 안 하고 가면 너만 손해.</p>
+        <a href="tel:010-6279-0862" class="hero-cta">📞 지금 전화해서 확인하세요</a>
+    </div>
+</section>
+
+<!-- SEO Visual 2: 셔츠룸 Cardless Editorial List -->
+<div class="seo-visual-cards" role="img" aria-label="합정 셔츠룸 비교 셔츠룸 — 강서 셔츠룸 정보" 
+     style="display:flex;flex-direction:column;gap:0;margin:40px 0;border-top:1px solid #e5e5e0;border-bottom:1px solid #e5e5e0;background:#faf9f6">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 01 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">특화</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">합정 셔츠룸 비교</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 02 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">다수 실적</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">합정 셔츠룸 비교</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:none;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 03 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">고품질</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">합정 셔츠룸 비교</span>
+  </div>
+</div>
+
+<main>
+    <!-- 비교 섹션 -->
+    <section id="compare">
+        <div class="container">
+            <h2>⚡ 합정 셔츠룸 비교 분석</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🏆 A급 셔츠룸</h3>
+                    <p>시스템 깔끔, 마인드 좋음. 가격대비 퀄리티 합정 탑급. 초이스 시스템 자유도 높음.</p>
+                    <span class="price-tag">입장 15만원~</span>
+                </div>
+                <div class="card">
+                    <h3>🥈 B급 셔츠룸</h3>
+                    <p>무난한 편. 근데 서비스가 좀 딱딱함. 가격은 저렴한데 그만큼 퀄리티도 평균.</p>
+                    <span class="price-tag">입장 12만원~</span>
+                </div>
+                <div class="card">
+                    <h3>❌ C급 셔츠룸 (거름)</h3>
+                    <p>시스템 구림. 자리도 좁고, 마인드 별로. 돈 아깝다. 가지 마라. 진짜다.</p>
+                    <span class="price-tag">비추</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 리뷰 섹션 -->
+    <section id="reviews">
+        <div class="container">
+            <h2>🔥 생생한 유저 후기</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-nickname">합정마스터</span>
+                        <span class="review-date">2025.03.12</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">진짜 여기 괜찮음. 다른 데 비해 초이스 퀄리티가 다르다. 시스템도 설명 잘해주고. 합정에서 이 정도면 꿀빠는 거임.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-nickname">셔츠입은형님</span>
+                        <span class="review-date">2025.03.08</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">두 번 갔는데 첫 번째보다 두 번째가 더 좋았음. 가격 대비 나쁘지 않다. 근데 자리가 좁은 건 아쉬움.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-nickname">밤샘러</span>
+                        <span class="review-date">2025.02.28</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">친구 따라서 갔다가 반함. 진짜 합정 셔츠룸 중에 여기가 탑인 듯. 마인드 좋고, 시간도 넉넉하게 써줌. 강추.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-nickname">노는게제일좋아</span>
+                        <span class="review-date">2025.02.15</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">처음 가봤는데 괜찮네. 가격이 좀 나가긴 하는데 그만큼 서비스가 좋음. 다음에 또 갈 의향 있음.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-nickname">현지인추천</span>
+                        <span class="review-date">2025.01.30</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">여기 안 가본 사람들은 인생 손해다. 합정에서 제일 괜찮은 곳. 시스템 완전 투명하고, 직원들도 친절함.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 시스템/특징 섹션 -->
+    <section id="features">
+        <div class="container">
+            <h2>💎 합정 셔츠룸 시스템 완벽 분석</h2>
+            <ul class="feature-list">
+                <li>초이스 시스템 자유도 최상</li>
+                <li>가격 투명하게 공개 (추가금 없음)</li>
+                <li>룸 컨디션 & 청결도 합정 탑급</li>
+                <li>직원 마인드 & 서비스 교육 완료</li>
+                <li>시간 약속 100% 준수 (타임 오버 없음)</li>
+                <li>주차 지원 & 교통 편리</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA 블록 -->
+    <div class="cta-block">
+        <div class="container">
+            <h2>📞 지금 바로 비교 끝내세요</h2>
+            <p>합정 셔츠룸, 더 이상 헤매지 마. 시스템, 가격, 분위기 싹 다 비교해드립니다. 전화 한 통이면 끝.</p>
+            <a href="tel:010-6279-0862" class="cta-phone">010-6279-0862</a>
+        </div>
+    </div>
+</main>
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">Kayano 14 OG 박스 라벨의 미세한 색차, 그걸로 한 번에 리셀 가격을 결정하는 이유</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">"아, 진짜 Kayano 14 OG 박스 라벨에 찍힌 로고 색상 차이로 리셀 가격만 50% 가량 달라질 수 있다니까." Q: 왜 그 미세한 프린트 차이가 박스 상태만큼 중요한가? A: 2023 년 리스탁 버전은 인솔과 상자의 조화 부분을 재제해서 박스 태그에 색상을 다</p>
+      </div>
+      <a href="posts/interview-002-iq6r8j.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">Created Title</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">Thinking Process: 1. **Analyze the Request:** * **Role/Persona**: [퇴물] (Old school), [설명충] (Detail-oriented explainer), [팩트폭력형] (Fact-attack). A forme</p>
+      </div>
+      <a href="posts/myth-001-10e5j27.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+
+<div class="seo-visual-divider" role="separator" aria-label="합정 셔츠룸 비교 구분선" style="margin:32px 0;text-align:center;color:#e5e5e0;font-size:0.85rem;letter-spacing:0.5em">◆ ◆ ◆</div>
+</section>
+<footer>
+    <div class="container">
+        <p>합정 셔츠룸 비교 | 합정 셔츠룸 추천 & 가격 정보</p>
+        <p>상호명: 합정셔츠룸비교 | 대표: 홍길동 | 사업자등록번호: 000-00-00000</p>
+        <p>주소: 서울 마포구 합정동</p>
+        <p>전화: <a href="tel:010-6279-0862">010-6279-0862</a></p>
+        <p>&copy; 2025 t3b08-hj-shirts-cmp.vercel.app. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('navLinks');
+        const hamburger = document.querySelector('.hamburger');
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    }
+
+    // 메뉴 클릭 시 닫기
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('active');
+            document.querySelector('.hamburger').classList.remove('active');
+        });
+    });
+</script>
+
+
+<!-- BPaaS Forced Floating CTA -->
+<div id="bpaas-floating-phone" style="position:fixed; bottom:0; left:0; width:100%; z-index:9999; background:#ef4444; color:#ffffff; text-align:center; padding:12px; font-weight:bold; font-size:16px; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">
+  <a href="tel:01062790862" style="color:#ffffff; text-decoration:none; display:block; width:100%; height:100%;">
+    📞 010-6279-0862 전화연결하기
+  </a>
+</div>
+<!-- End BPaaS Forced Floating CTA -->
+
 </body>
 </html>

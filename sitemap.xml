@@ -2,39 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  
   <url>
-    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/normal-1.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/about.html</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/normal-2.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/blog.html</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/normal-3.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/interview-002-iq6r8j.html</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/juice-1.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/juice-2.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/myth-001-10e5j27.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/normal-1.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/normal-2.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/posts/normal-3.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mqlwmsltm-arch.github.io/bp-t3b08-hj-shirts-cmp/feed.xml</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
