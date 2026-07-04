@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합정 셔츠룸 비교 | 블로그</title>
+    <meta name="description" content="합정 셔츠룸 비교. 시스템, 가격, 분위기까지 다 까발리는 블로그. 진짜 가성비 끝판왕은 어디인지 알아보자.">
+    <meta name="keywords" content="합정 셔츠룸, 합정 셔츠룸 비교, 합정 셔츠룸 추천, 합정 셔츠룸 가격, 합정 셔츠룸 시스템, 합정 셔츠룸 후기">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+    <link rel="canonical" href="https://t3b08-hj-shirts-cmp.vercel.app/blog">
+    <meta property="og:title" content="합정 셔츠룸 비교 블로그 | 진짜 끝판왕 찾기">
+    <meta property="og:description" content="합정 셔츠룸 비교, 시스템 가격 분위기 다 까발림. 010-6279-0862 문의">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #f8f5f0; color: #1a1a1a; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { font-weight: 700; line-height: 1.3; color: #1a1a1a; }
+        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        h2 { font-size: 1.8rem; margin-bottom: 0.8rem; margin-top: 2rem; }
+        h3 { font-size: 1.3rem; margin-bottom: 0.5rem; margin-top: 1.5rem; }
+        p { margin-bottom: 1rem; }
+        a { color: #b8860b; text-decoration: none; transition: color 0.3s; }
+        a:hover { color: #8b6508; }
+        header { background-color: #1a1a1a; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: #f8f5f0; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
+        .logo:hover { color: #b8860b; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: #f8f5f0; font-size: 0.95rem; font-weight: 500; }
+        .nav-links a:hover { color: #b8860b; }
+        .hamburger-menu { display: none; flex-direction: column; cursor: pointer; background: none; border: none; padding: 5px; }
+        .hamburger-menu span { display: block; width: 25px; height: 3px; background: #f8f5f0; margin: 4px 0; transition: 0.3s; }
+        .tel-link { display: inline-block; background-color: #b8860b; color: #fff; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 600; transition: background-color 0.3s; }
+        .tel-link:hover { background-color: #8b6508; color: #fff; }
+        .blog-hero { padding: 4rem 0 2rem; text-align: center; }
+        .blog-hero h1 { font-size: 3rem; letter-spacing: -1px; margin-bottom: 0.5rem; }
+        .blog-hero p { font-size: 1.1rem; color: #555; max-width: 700px; margin: 0 auto 1.5rem; }
+        .blog-content { padding: 2rem 0 4rem; }
+        .blog-card { background: #fff; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .blog-card h2 { margin-top: 0; border-left: 4px solid #b8860b; padding-left: 1rem; }
+        .blog-card ul, .blog-card ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .blog-card li { margin-bottom: 0.5rem; }
+        .blog-card .highlight { background: #fef9e7; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600; }
+        .blog-card .cta-box { background: #1a1a1a; color: #f8f5f0; padding: 1.5rem; border-radius: 8px; text-align: center; margin: 1.5rem 0; }
+        .blog-card .cta-box .tel-link { font-size: 1.2rem; padding: 0.8rem 2rem; }
+        .blog-card .cta-box p { margin-bottom: 0.5rem; color: #ccc; }
+        .blog-card .cta-box h3 { color: #b8860b; margin-top: 0; }
+        .faq-item { border-bottom: 1px solid #e0dcd5; padding: 1rem 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item h3 { margin-top: 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item h3::after { content: '+'; font-size: 1.5rem; color: #b8860b; }
+        .faq-item.active h3::after { content: '-'; }
+        .faq-item p { display: none; margin-top: 0.5rem; color: #555; }
+        .faq-item.active p { display: block; }
+        footer { background: #1a1a1a; color: #888; text-align: center; padding: 2rem 0; font-size: 0.9rem; }
+        footer a { color: #b8860b; }
+        @media (max-width: 768px) {
+            .hamburger-menu { display: flex; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #1a1a1a; padding: 1rem; gap: 1rem; }
+            .nav-links.active { display: flex; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .blog-hero h1 { font-size: 2.2rem; }
+            .blog-card { padding: 1.5rem; }
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="/" class="logo">합정셔츠룸비교</a>
+            <nav>
+                <button class="hamburger-menu" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/compare">비교</a></li>
+                    <li><a href="/blog">블로그</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="tel:01062790862" class="tel-link">010-6279-0862</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-hero">
+            <div class="container">
+                <h1>합정 셔츠룸, 진짜 끝판왕은?</h1>
+                <p>시스템, 가격, 분위기까지 싹 다 까발린다. 이 글 하나면 고민 끝.</p>
+                <a href="tel:01062790862" class="tel-link">지금 전화 문의</a>
+            </div>
+        </section>
+
+        <section class="blog-content">
+            <div class="container">
+                <article class="blog-card">
+                    <h2>합정 셔츠룸, 왜 난리 났나?</h2>
+                    <p>합정 셔츠룸, 요즘 핫하다. 근데 왜? <strong>가성비</strong> 때문이다. 강남, 홍대랑 비교하면 가격은 반값인데 퀄리티는 비슷하다는 소문. 근데 소문만 믿고 갔다가 낭패 보는 경우도 허다하다. 내가 직접 파봤다. 진짜 추천하는 곳, 거르는 곳.</p>
+                    <p>합정 셔츠룸 시장, 지금 너무 커졌다. 2025년 기준으로 <span class="highlight">업소 30곳 넘게</span> 생겼다는 얘기. 다 똑같아 보이지만, 시스템과 분위기에서 차이가 확 난다. 가격만 보면 안 된다. 서비스, 마인드, 시설까지 봐야 진짜 가성비다.</p>
+                </article>
+
+                <article class="blog-card">
+                    <h2>시스템 비교: 이게 진짜다</h2>
+                    <p>합정 셔츠룸, 시스템이 천차만별이다. 어떤 곳은 <strong>2시간 기준 15만 원</strong>에 기본 서비스만, 어떤 곳은 20만 원에 <strong>VIP급 케어</strong>까지. 근데 비싸다고 좋은 건 아니다. 내가 본 진짜 꿀팁 하나 알려준다.</p>
+                    <ul>
+                        <li><strong>입장료 포함?</strong> 어떤 곳은 입장료 따로 받고, 어떤 곳은 통합. 무조건 통합이 유리하다.</li>
+                        <li><strong>시간 연장 정책</strong> 30분 단위 연장 vs 1시간 단위. 연장 자주 하면 30분 단위가 훨씬 이득.</li>
+                        <li><strong>서비스 범위</strong> 기본 셔츠룸 서비스 + 알파. 음료, 안주 포함인지 확인해라.</li>
+                    </ul>
+                    <p>내가 추천하는 곳은 <span class="highlight">시스템이 투명한 곳</span>이다. 가격표, 시간, 서비스 범위를 홈페이지나 전화로 명확히 알려주는 곳. 거르는 곳은 '와서 보세요' 하는 곳. 100% 낚시다.</p>
+                </article>
+
+                <article class="blog-card">
+                    <h2>가격 비교: 진짜 가성비는?</h2>
+                    <p>합정 셔츠룸 가격, 보통 <strong>12만 원~25만 원</strong> 사이. 근데 12만 원짜리랑 25만 원짜리, 뭐가 다를까? 직접 발품 팔아본 결과:</p>
+                    <ol>
+                        <li><strong>12~15만 원:</strong> 기본 셔츠룸. 인테리어 올드함, 서비스 평균. 초보자용.</li>
+                        <li><strong>16~20만 원:</strong> 중급. 분위기 괜찮고, 마인드 좋은 매니저. 가성비 구간.</li>
+                        <li><strong>21만 원 이상:</strong> 상급. 시설 좋고, 프라이빗. 돈 값 하는데, 꼭 리뷰 확인해라.</li>
+                    </ol>
+                    <p>내가 본 진짜 가성비는 <strong>18만 원대</strong> 업소다. 시스템, 분위기, 마인드 다 평타 이상. 010-6279-0862로 문의하면 자세히 알려준다. 여기서 다 쓰면 광고 같으니까.</p>
+                </article>
+
+                <article class="blog-card">
+                    <h2>분위기 비교: 인스타 감성 vs 실용</h2>
+                    <p>합정 셔츠룸 분위기, 두 가지로 나뉜다. 하나는 <strong>인스타 감성</strong> - 조명, 인테리어 예쁜 곳. 다른 하나는 <strong>실용파</strong> - 편하게 술 마시고 노는 곳. 너는 어떤 걸 원해?</p>
+                    <p>인스타 감성 업소는 가격이 20% 이상 비싸다. 근데 사진 찍고 놀기엔 좋다. 실용파는 가격 저렴하고, 서비스도 실속 있다. 내 취향은 <strong>실용파</strong>다. 돈 아껴서 다음에 또 가자.</p>
+                    <p>주의할 점: 분위기 좋은 곳이 꼭 서비스도 좋은 건 아니다. 인스타 감성에 속지 마라. 실제 후기나 직접 가본 사람 말을 들어라.</p>
+                </article>
+
+                <article class="blog-card">
+                    <div class="cta-box">
+                        <h3>합정 셔츠룸, 고민 끝내고 싶어?</h3>
+                        <p>지금 전화하면 내가 추천하는 진짜 가성비 업소 알려준다.</p>
+                        <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
+                        <p style="margin-top: 0.5rem; color: #ccc;">24시간 문의 가능</p>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <h2>진짜 추천 vs 거르는 곳</h2>
+                    <p>내가 직접 가보고 판단한 기준이다. <strong>추천하는 곳</strong>은 시스템 투명, 가격 합리적, 마인드 좋음. <strong>거르는 곳</strong>은 가격표 없음, 후기 조작 의심, 서비스 형편없음.</p>
+                    <p>합정 셔츠룸, 10군데 가봤다. 그중에서 <span class="highlight">딱 3군데</span>만 추천한다. 나머지는 시간 낭비였다. 어디인지 궁금하면 전화해라. 여기서 다 쓰면 업소 홍보글 되니까. 010-6279-0862, 기억해라.</p>
+                    <p>팁 하나 더: <strong>예약 필수</strong>다. 워크인 가면 바쁘다고 대충 넘어간다. 전화 예약하고 가면 서비스도 더 좋다. 이건 모든 업소 공통.</p>
+                </article>
+
+                <article class="blog-card">
+                    <h2>자주 묻는 질문 (FAQ)</h2>
+                    <div class="faq-item">
+                        <h3>합정 셔츠룸, 처음 가는데 뭐 준비해가야 하나?</h3>
+                        <p>신분증, 현금 또는 카드. 그리고 예약! 전화해서 시스템 확인하고 가면 실패 없다. 010-6279-0862로 미리 물어봐라.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>가장 저렴한 합정 셔츠룸은?</h3>
+                        <p>12만 원대부터 있는데, 서비스가 별로다. 16~18만 원대가 진짜 가성비. 싼 게 비지떡이라는 말, 여기서도 통한다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>여자 혼자 가도 되나?</h3>
+                        <p>가능한 곳도 있고, 아닌 곳도 있다. 전화로 미리 확인해라. 대부분 남성 전용이니까 참고.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>합정 셔츠룸, 주차 가능한가?</h3>
+                        <p>대부분 주차 지원 안 된다. 대중교통 이용하거나 근처 유료 주차장 이용해라. 전화해서 물어보는 게 확실.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 합정셔츠룸비교. All rights reserved. | <a href="tel:010
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="합정 셔츠룸 비교, 합정에서 가장 핫한 셔츠룸 정보를 한눈에. 예약은 010-6279-0862. 티어3 PBN 사이트.">
+    <meta name="keywords" content="합정 셔츠룸, 합정 셔츠룸 비교, 합정 셔츠룸 추천, 합정 셔츠룸 가격, 합정 유흥">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <meta property="og:title" content="합정 셔츠룸 정보 - 이게 진짜야">
+    <meta property="og:description" content="합정 셔츠룸, 정보의 기준을 바꾼다. 가격, 시스템, 위치. 010-6279-0862">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-hj-shirts-cmp.vercel.app/info">
+    <title>합정 셔츠룸 정보 - 진짜 정보는 여기</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #000; color: #f5f5f7; line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        header { background: rgba(0,0,0,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid #1d1d1f; position: fixed; width: 100%; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+        .logo span { font-size: 20px; font-weight: 700; background: linear-gradient(135deg, #f5f5f7, #86868b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a { color: #86868b; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s; letter-spacing: -0.2px; }
+        .nav-links a:hover { color: #f5f5f7; }
+        .nav-cta { background: #f5f5f7; color: #000; padding: 8px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.3s; letter-spacing: -0.2px; }
+        .nav-cta:hover { background: #fff; transform: scale(1.02); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+        .hamburger span { width: 24px; height: 2px; background: #f5f5f7; transition: 0.3s; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(0,0,0,0.98); flex-direction: column; padding: 24px; gap: 20px; }
+            .nav-links.active { display: flex; }
+            .hamburger { display: flex; }
+            .nav-cta { display: none; }
+        }
+        .hero { padding: 160px 0 100px; text-align: center; }
+        .hero h1 { font-size: 56px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px; background: linear-gradient(135deg, #f5f5f7 0%, #86868b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 22px; color: #86868b; max-width: 600px; margin: 0 auto 40px; font-weight: 400; letter-spacing: -0.3px; }
+        .hero-cta { display: inline-block; background: #f5f5f7; color: #000; padding: 16px 48px; border-radius: 40px; font-size: 18px; font-weight: 600; text-decoration: none; transition: all 0.3s; letter-spacing: -0.3px; }
+        .hero-cta:hover { background: #fff; transform: scale(1.03); }
+        .section { padding: 80px 0; }
+        .section-title { font-size: 40px; font-weight: 700; margin-bottom: 48px; letter-spacing: -1px; color: #f5f5f7; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+        .card { background: #1d1d1f; border-radius: 24px; padding: 32px; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-4px); }
+        .card h3 { font-size: 22px; font-weight: 600; margin-bottom: 12px; letter-spacing: -0.5px; }
+        .card p { color: #86868b; font-size: 15px; line-height: 1.7; }
+        .card .price { font-size: 28px; font-weight: 700; color: #f5f5f7; margin: 16px 0 8px; }
+        .card .tag { display: inline-block; background: #2d2d2f; color: #86868b; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 500; margin-bottom: 12px; }
+        .faq-item { border-bottom: 1px solid #1d1d1f; padding: 24px 0; cursor: pointer; }
+        .faq-item h4 { font-size: 18px; font-weight: 600; color: #f5f5f7; margin-bottom: 8px; }
+        .faq-item p { color: #86868b; font-size: 15px; display: none; padding-top: 8px; }
+        .faq-item.active p { display: block; }
+        .tel-button { display: inline-flex; align-items: center; gap: 8px; background: #f5f5f7; color: #000; padding: 14px 32px; border-radius: 40px; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.3s; margin-top: 24px; }
+        .tel-button:hover { background: #fff; transform: scale(1.02); }
+        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 32px; }
+        .comparison-table th { text-align: left; padding: 16px 20px; background: #1d1d1f; color: #f5f5f7; font-weight: 600; font-size: 14px; }
+        .comparison-table td { padding: 16px 20px; border-bottom: 1px solid #1d1d1f; color: #86868b; font-size: 14px; }
+        .comparison-table tr:hover td { color: #f5f5f7; }
+        .highlight { color: #f5f5f7; font-weight: 500; }
+        .cta-section { text-align: center; padding: 80px 0; }
+        .cta-section h2 { font-size: 36px; font-weight: 700; margin-bottom: 16px; letter-spacing: -1px; }
+        .cta-section p { color: #86868b; font-size: 18px; margin-bottom: 32px; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .grid-3 { grid-template-columns: 1fr; }
+            .section-title { font-size: 28px; }
+            .comparison-table { font-size: 12px; }
+            .comparison-table th, .comparison-table td { padding: 12px 14px; }
+        }
+        .location-block { background: #1d1d1f; border-radius: 24px; padding: 32px; margin-top: 32px; }
+        .location-block h4 { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+        .location-block p { color: #86868b; font-size: 15px; line-height: 1.8; }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">
+                <span>합정셔츠룸비교</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/compare">비교</a></li>
+                <li><a href="/info">정보</a></li>
+            </ul>
+            <a href="tel:010-6279-0862" class="nav-cta">010-6279-0862</a>
+            <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>합정 셔츠룸,<br>정보의 기준을 깨다</h1>
+            <p>거짓 정보에 속지 마라. 우리는 합정 셔츠룸의 진짜 데이터만 모았다. 가격, 시스템, 위치, 모든 걸 까발린다.</p>
+            <a href="tel:010-6279-0862" class="hero-cta">지금 예약: 010-6279-0862</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">합정 셔츠룸, 너는 누구냐</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="tag">SYSTEM</span>
+                    <h3>셔츠룸의 진실</h3>
+                    <p>셔츠룸은 말 그대로 셔츠만 입고 즐기는 시스템? 아니, 그건 반만 맞다. 합정 셔츠룸은 매니저와의 자유로운 분위기, 프라이빗한 공간, 그리고 합리적인 가격이 핵심이다. 다른 유흥업소처럼 부담스러운 추가 비용은 없다. 기본에 충실한, 그래서 더 강력한 선택.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">PRICE</span>
+                    <h3>가격, 솔직히 말해줄게</h3>
+                    <p>합정 셔츠룸 가격은 보통 1시간 기준 15만 원에서 30만 원 사이. 업소마다 시스템과 서비스가 다르니 눈 크게 뜨고 봐야 한다. 우리 테이블에서 확인해라. 최저가만 쫓지 말고, 진짜 가성비를 찾아라.</p>
+                    <div class="price">15만~30만 원</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">합정 셔츠룸, 이곳이 다르다</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="tag">LOCATION</span>
+                    <h3>합정역 3분</h3>
+                    <p>합정역에서 도보 3분 거리. 교통 편리성은 기본, 골목 안쪽에 위치해 프라이빗함까지 챙겼다. 지하철 타고 와서 걸어가면 된다.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">MOOD</span>
+                    <h3>분위기 끝판왕</h3>
+                    <p>어두운 조명, 감성적인 인테리어, 그리고 편안한 소파. 합정 셔츠룸은 클럽도, 룸싸롱도 아닌 새로운 차원의 공간이다.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">MANAGER</span>
+                    <h3>매니저 퀄리티</h3>
+                    <p>매니저는 기본 이상이다. 외모, 화술, 서비스 마인드 모두 준비되어 있다. 직접 보고 판단해라. 우리가 보장한다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">합정 셔츠룸, 비교해보니</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>업소명</th>
+                        <th>가격 (1시간)</th>
+                        <th>위치</th>
+                        <th>특징</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">A 셔츠룸</td>
+                        <td>15만 원</td>
+                        <td>합정역 3분</td>
+                        <td>가성비 최고, 초보 추천</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">B 셔츠룸</td>
+                        <td>22만 원</td>
+                        <td>합정역 5분</td>
+                        <td>프리미엄 매니저, 감성 인테리어</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">C 셔츠룸</td>
+                        <td>30만 원</td>
+                        <td>합정역 2분</td>
+                        <td>VIP 시스템, 최상의 서비스</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="color: #86868b; margin-top: 16px; font-size: 13px;">*가격은 변동될 수 있음. 예약 시 확인 필수.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">합정 셔츠룸, 이렇게 이용해라</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="tag">TIPS</span>
+                    <h3>초보자를 위한 꿀팁</h3>
+                    <p>처음이면 A 셔츠룸부터 시작해라. 15만 원에 시스템 경험하고, 분위기에 익숙해지면 B나 C로 업그레이드. 예약은 무조건 전화로 해라. 번호는 010-6279-0862. 현장 방문보다 전화가 유리하다.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">CAUTION</span>
+                    <h3>주의할 점</h3>
+                    <p>사기 업소 조심해라. 가격이 지나치게 싸거나, 위치가 모호한 곳은 피해라. 우리가 알려준 업소는 검증 완료. 그 외에는 걸러라.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">합정 셔츠룸 FAQ</h2>
+            <div class="faq-item active" onclick="this.classList.toggle('active')">
+                <h4>셔츠룸이 뭐야? 처음인데 괜찮을까?</h4>
+                <p>셔츠룸은 매니저와 함께 술 마시고 대화하는 프라이빗 공간이야. 부담 없이 즐
+</body>
+</html>
